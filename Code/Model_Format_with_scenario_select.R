@@ -29,10 +29,10 @@ library(stringr)
 
 # wd ----
 ## working directory as "Modelling" folder
-directory <- "C:/Users/mstew/Documents/introduced_SDM_prediction"
-data_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Data"
-out_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Outputs"
-eval_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Evaluations"
+directory <- "C:/Users/mstew/Documents/introduced_SDM_predictions"
+data_dir <- "C:/Users/mstew/Documents/introduced_SDM_predictions/Data"
+out_dir <- "C:/Users/mstew/Documents/introduced_SDM_predictions/Outputs"
+eval_dir <- "C:/Users/mstew/Documents/introduced_SDM_predictions/Evaluations"
 setwd(directory)
 
 

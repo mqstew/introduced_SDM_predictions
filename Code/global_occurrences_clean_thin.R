@@ -15,10 +15,10 @@ library(dplyr)
 library(stringr)
 
 # set directory ----
-directory <- "C:/Users/mstew/Documents/introduced_SDM_prediction"
-data_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Data"
-out_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Outputs"
-
+directory <- "C:/Users/mstew/Documents/introduced_SDM_predictions"
+data_dir <- "C:/Users/mstew/Documents/introduced_SDM_predictions/Data"
+out_dir <- "C:/Users/mstew/Documents/introduced_SDM_predictions/Outputs"
+eval_dir <- "C:/Users/mstew/Documents/introduced_SDM_predictions/Evaluations"
 setwd(directory)
 
 # occ data clean and save ----
