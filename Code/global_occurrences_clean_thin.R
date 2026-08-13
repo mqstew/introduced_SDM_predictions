@@ -1,5 +1,5 @@
 ## Coordinate cleaner and thinning
-## With thanks to Felipe Espinosa who's work provides a basis for this code
+## With thanks to Felipe Espinoza who's work provides a basis for this code
 ## and for his assistance with errors and providing advice.
 
 ## This code takes the occurrence data (downloaded from GBIF) and cleans and thins

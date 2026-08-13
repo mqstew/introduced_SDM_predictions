@@ -1,6 +1,10 @@
 ## SDM Protocol from model format to output
-## With thanks to Felipe Espinosa who's work provides a basis for this code
+## With thanks to Felipe Espinoza who's work provides a basis for this code
 ## and for his assistance with errors and providing advice.
+
+## VIF select 5 bioclim variables for a focal species
+## format the predictor layers, pseudo-absences and occurrences for modelling
+## save model outputs
 
 # clean and libraries ----
 rm(list=ls())
@@ -25,7 +29,10 @@ library(stringr)
 
 # wd ----
 ## working directory as "Modelling" folder
-directory <- "C:/.../Modelling"
+directory <- "C:/Users/mstew/Documents/introduced_SDM_prediction"
+data_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Data"
+out_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Outputs"
+eval_dir <- "C:/Users/mstew/Documents/introduced_SDM_prediction/Evaluations"
 setwd(directory)
 
 
@@ -148,22 +155,22 @@ ensemble <- BIOMOD_EnsembleModeling(
 message("\n> Saving model_out for later use")
 saveRDS(
   model_out,
-  file.path(directory, paste0(resp_name, "_", scenario_name, "_model_out.rds")))
+  file.path(eval_dir, paste0(resp_name, "_", scenario_name, "_model_out.rds")))
 message("\n> Saving ensemble for later use")
 saveRDS(
   ensemble,
-  file.path(directory, paste0(resp_name, "_", scenario_name, "_ensemble_out.rds")))
+  file.path(eval_dir, paste0(resp_name, "_", scenario_name, "_ensemble_out.rds")))
 
 # save model and ensemble evaluations ----
 message("\n> Saving model evaluations")
 model_evals<- get_evaluations(model_out)
 saveRDS(model_evals, 
-        file.path(directory, paste0(resp_name, "_", scenario_name,
+        file.path(eval_dir, paste0(resp_name, "_", scenario_name,
                                     "_model_evaluations.rds")))
 message("\n> Saving ensemble evaluations")
 ensemble_evals <- get_evaluations(ensemble)
 saveRDS(ensemble_evals, 
-        file.path(directory, paste0(resp_name, "_", scenario_name, 
+        file.path(eval_dir, paste0(resp_name, "_", scenario_name, 
                                     "_ensemble_evaluations.rds")))
 # cross-validation metrics ----
 ## as a saved .csv
